@@ -1,7 +1,8 @@
+import Imran from "./Imran";
 
 function App() {
   return (
-    <h1>React Mastery | Md. Imran Nazir</h1>
+    <Imran />
   );
 }
 

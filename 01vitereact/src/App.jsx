@@ -1,11 +1,14 @@
-
+import Imran from "./imran"
 
 
 
 
 function App() {
   return (
-    <h1>React Mastery | Md. Imran Nazir</h1>
+    <>
+      <Imran />
+      <p>Lorem ipsum dolor sit amet.</p>
+    </>
   )
 }
 
