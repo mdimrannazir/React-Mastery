@@ -9,7 +9,7 @@ function App() {
     >
 
       <div className="fixed flex flex-wrap justify-center bottom-32 inset-x-2 px-2">
-        <h1 className="justify-center flex text-3xl font-bold flex bottom-16"
+        <h1 className="justify-center flex text-3xl font-bold bottom-16"
           style={{ color: "white" }}
         >Choose any color</h1>
       </div>
