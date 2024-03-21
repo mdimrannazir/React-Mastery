@@ -2,11 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
+import User from './components/User/User.jsx'
+import Github from './components/Github/Github.jsx'
+import Git from './components/Github/Git.jsx'
+import { githubInfos } from './components/Github/Git.jsx'
 
 // const router = createBrowserRouter([
 //   {
@@ -29,6 +33,25 @@ import Contact from './components/Contact/Contact.jsx'
 //     ]
 //   }
 // ])
+
+// Same as the previous one
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Layout />}>
+      <Route path='' element={<Home />} />
+      <Route path='about' element={<About />} />
+      <Route path='contact' element={<Contact />} />
+      <Route path='user/:userID' element={<User />} />
+      <Route path='github' element={<Github />} />
+      <Route
+        loader={githubInfos}
+        path='git'
+        element={<Git />}
+      />
+    </Route>
+  )
+)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
